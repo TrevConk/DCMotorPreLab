@@ -1,4 +1,5 @@
 import RPi.GPIO as GPIO
+import time
 
 inputPin = 26
 GPIO.setmode(GPIO.BCM)

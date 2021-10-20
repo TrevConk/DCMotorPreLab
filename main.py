@@ -1,5 +1,4 @@
 import RPi.GPIO as GPIO
-import time
 
 inputPin = 26
 GPIO.setmode(GPIO.BCM)
@@ -12,6 +11,7 @@ try:
     pwmMotor.ChangeDutyCycle(int(input('Enter the speed of the motor:')))
 except Exception as e:
   print('There was an error',e)
+  GPIO.cleanup()
 
 
 

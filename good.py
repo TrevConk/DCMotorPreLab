@@ -9,9 +9,10 @@ pwmMotor.start(0)
 
 try:
   while(True):
-    for x in range(0,5,100):
-      pwmMotor.ChangeDutyCycle(x)
-      time.sleep(.1)
+    pwmMotor.ChangeDutyCycle(100)
+    time.sleep(2)
+    pwmMotor.ChangeDutyCycle(0)
+    time.sleep(2)
 except Exception as e:
   print('There was an error',e)
   GPIO.cleanup()
